@@ -30,3 +30,8 @@ report(){const a=DB.orders.filter(o=>o.stage>0),n=a.filter(o=>o.kind!='reparo'),
 const PG={home:'index.html',login:'login.html',reg:'cadastro.html',aluno:'estudante.html',pedir:'pedir.html',admin:'admin.html',rel:'relatorios.html',escola:'escola.html',otica:'otica-painel.html',opts:'oticas.html',optp:'otica-perfil.html'};
 const ROLE={aluno:'aluno',pedir:'aluno',admin:'admin',rel:'admin',escola:'escola',otica:'otica'};
 const flash=t=>{try{sessionStorage.setItem('pvm',t)}catch(e){}};
+
+/* ===== ODS do projeto (edite os textos aqui) ===== */
+const ODS=[
+{n:4,c:'#C5192D',f:'#FFFFFF',t:'Educação de Qualidade',lb:'Objetivo',m:'Assegurar a educação inclusiva e equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos.',p:['Armações e consertos gratuitos para estudantes que precisam enxergar bem para aprender.','Oficina STEM feita pelos próprios estudantes, com um problema real da comunidade.','Painel da escola para acompanhar cada estudante atendido.']},
+{n:12,meta:'12.5',c:'#BF8B2E',f:'#16222E',t:'Consumo e Produção Responsáveis',lb:'Meta 12.5',m:'Até 2030, reduzir substancialmente a geração de resíduos por meio da prevenção, redução, reciclagem e reuso.',p:['Reciclagem: as armações usam filamento de baixo custo e a estimativa de garrafas PET recicladas aparece nos relatórios.','Reuso: óculos quebrados são consertados com peças impressas em 3D, em vez de irem para o lixo.','Prevenção: a impressão 3D sob demanda produz só o que foi pedido, sem desperdício.']}];
