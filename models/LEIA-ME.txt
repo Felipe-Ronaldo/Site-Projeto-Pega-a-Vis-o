@@ -1,0 +1,10 @@
+Modelo 3D dos óculos exibido na primeira imagem da página inicial.
+
+  oculos.stl   Style Frame Glasses (MakerWorld), carregado automaticamente.
+
+Para trocar o modelo, substitua o arquivo por outro com o mesmo nome. Também são
+aceitos oculos.glb (melhor opção), oculos.gltf e oculos.3mf.
+Se não houver nenhum arquivo, o site mostra um modelo de óculos gerado por ele mesmo.
+
+Se o modelo novo aparecer deitado ou de cabeça para baixo, ajuste "stlRotX"
+(ou o ângulo inicial) no topo de js/viewer3d.js. Arquivos .glb não precisam desse ajuste.
