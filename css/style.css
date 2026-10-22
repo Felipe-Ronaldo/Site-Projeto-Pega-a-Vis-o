@@ -45,3 +45,14 @@ form{display:flex;flex-direction:column;gap:1rem}form.row{flex-direction:row}
 [data-nb] #pr{display:none}[data-nb] main{margin:0 auto;max-width:900px}
 :root[data-hc]{--bg:#000;--soft:#000;--tx:#fff;--mu:#fff;--ac:#FFEB3B;--ac2:#FFEB3B;--ok:#FFEB3B;--bd:#fff;--bt:#000;--er:#FF9E9E;--s0:#fff;--s1:#FFEB3B;--s2:#FFEB3B;--s3:#FFEB3B;--s4:#FFEB3B;--s5:#FFEB3B}
 [data-hc] .b2{border-color:#FFEB3B;color:#FFEB3B}[data-hc] .lk{text-decoration:underline}
+
+/* ===== ODS ===== */
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.odbs{display:flex;gap:.5rem;flex-wrap:wrap;margin:0 0 1rem}
+.odb,.odt{display:inline-flex;align-items:center;border-radius:999px;font:700 .8125rem Sora,system-ui,sans-serif;text-decoration:none}
+.odb{min-height:44px;padding:.4rem 1rem}.odt{padding:.1rem .8rem;margin-bottom:.4rem}
+.ods{border:1.5px solid var(--bd);border-radius:20px;overflow:hidden;background:var(--bg)}
+.odh{display:flex;flex-direction:column;gap:.15rem;padding:1.1rem 1.25rem}.odh span{font-weight:700}.odn{font:700 1.7rem Sora,system-ui,sans-serif}
+.odc{padding:1.1rem 1.25rem .4rem}.odc ul{padding-left:1.2rem}
+[data-hc] .odb,[data-hc] .odt,[data-hc] .odh{background:#000!important;color:#FFEB3B!important;border:2px solid #FFEB3B}
+[data-hc] .odh{border-width:0 0 2px}
