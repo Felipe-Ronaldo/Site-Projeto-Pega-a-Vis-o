@@ -4,11 +4,11 @@ const apv=()=>`<section role=region aria-label="Opções de acessibilidade" styl
 /* Leitura em voz alta (Web Speech API) */
 const VS='h1,h2,h3,p,li,th,td,label,button,a,select,input,img,.st,.al,.ey,.big,.bd,.lk';let vt,vl=null,lv='';
 function vc(){return window.speechSynthesis?speechSynthesis.getVoices():[]}
-function ut(t){const u=new SpeechSynthesisUtterance(t),vs=vc();u.lang='pt-BR';u.voice=vs.find(x=>x.lang=='pt-BR')||vs.find(x=>x.lang.startsWith('pt'))||null;return u}
+function ut(t){const u=new SpeechSynthesisUtterance(t),vs=vc();const en=window.LANG=='en';u.lang=en?'en-US':'pt-BR';u.voice=vs.find(x=>x.lang==u.lang)||vs.find(x=>x.lang.startsWith(en?'en':'pt'))||null;return u}
 function say(t,q){if(!t||!window.speechSynthesis)return;if(!q)speechSynthesis.cancel();speechSynthesis.speak(ut(t))}
 function rt(el){if(el.matches('label')){const c=el.querySelector('input,select');if(c)return rt(c)}
  let t;if(el.matches('input,select')){const l=el.closest('label');let n='';if(l){const c=l.cloneNode(true);c.querySelectorAll('input,select').forEach(x=>x.remove());n=c.textContent}else n=el.getAttribute('aria-label')||el.placeholder||el.name||'';n=n.replace(/\s+/g,' ').trim();
-  t=el.type=='checkbox'||el.type=='radio'?n+(el.checked?', marcado':', desmarcado'):el.tagName=='SELECT'?n+', selecionado: '+el.selectedOptions[0].text:n+(el.value?': '+el.value:', campo vazio')}
+  t=el.type=='checkbox'||el.type=='radio'?n+tt(el.checked?', marcado':', desmarcado'):el.tagName=='SELECT'?n+tt(', selecionado: ')+el.selectedOptions[0].text:n+(el.value?': '+el.value:tt(', campo vazio'))}
  else{const c=el.cloneNode(true);c.querySelectorAll('select,svg,option').forEach(x=>x.remove());c.querySelectorAll('br,div,p,li,td,th,small,button,span').forEach(x=>x.insertAdjacentText('afterend',' '));t=(el.getAttribute('aria-label')||el.getAttribute('alt')||c.textContent).replace(/\s+/g,' ').trim()}
  return t.slice(0,400)}
 function sayAll(){if(!window.speechSynthesis)return;speechSynthesis.cancel();[...$('main').querySelectorAll('h1,h2,h3,p,li,tr,label,.st,.al')].forEach(el=>{if(el.closest('td p,td li'))return;const t=rt(el);if(t)say(t,1)})}
