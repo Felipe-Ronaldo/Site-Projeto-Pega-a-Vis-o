@@ -20,6 +20,35 @@
 <rect id="gb" x="54" width="252" height="8" style="fill:var(--bg)"/><rect id="cg" width="36" height="26" style="fill:var(--bg)"/><path id="nz" style="fill:var(--ac2);stroke:var(--ac2)"/></g>
 <text id="lb" x="180" y="510" text-anchor="middle" font-size="10" letter-spacing="3" fill="currentColor" font-family="'DM Sans',sans-serif">IMPRESSÃO 0%</text></svg>
 <div id="app"></div>
+<!-- =====================================================================
+     CONTEÚDO DESTA PÁGINA: edite os textos aqui, é HTML normal.
+     O app.js copia este template para dentro de #app (ao lado do menu).
+     Marcas especiais (o JS troca por dados que mudam):
+       comentário com uma palavra só, ex.: linhas  → lista/tabela preenchida pelo JS (função em SL, no app.js)
+       {{nome}}         valor preenchido pelo JS
+       data-se="x"      o elemento só aparece quando o dado x existir
+       data-visitante   só aparece para quem NÃO está logado
+       data-r="nv"      número do relatório (nv, rp, rpd, pet, eq, imp, dir, ot, rev)
+     Importante: mantenha cada frase em UMA linha só; o tradutor (js/i18n.js) usa o texto exato.
+     ===================================================================== -->
+<template id="pagina">
+<div class="row">
+  <h1>Relatórios e Impacto</h1>
+  <button class="b b2" data-a="go" data-v="admin">Voltar à oficina</button>
+</div>
+<!-- Os números vêm do sistema (data-r). Cada ODS tem a sua cor (ods-cor-N). -->
+<div class="g3">
+    <div class="c"><span class="odt ods-cor-4">ODS 4</span><div class="big" style="font-size:2rem" data-r="nv"></div>Armações novas produzidas</div>
+    <div class="c"><span class="odt ods-cor-12">ODS 12.5</span><div class="big" style="font-size:2rem" data-r="rp / rpd"></div>Consertos aceitos / concluídos</div>
+    <div class="c"><span class="odt ods-cor-12">ODS 12.5</span><div class="big" style="font-size:2rem" data-r="pet"></div>Garrafas PET recicladas (estimativa)</div>
+    <div class="c"><span class="odt ods-cor-4">ODS 4</span><div class="big" style="font-size:2rem" data-r="eq"></div>Equipes da oficina ativas (STEM)</div>
+    <div class="c"><div class="big" style="font-size:2rem" data-r="imp"></div>Em impressão 3D</div>
+    <div class="c"><div class="big" style="font-size:2rem" data-r="dir"></div>Entregas diretas</div>
+    <div class="c"><div class="big" style="font-size:2rem" data-r="ot"></div>Encaminhados a óticas</div>
+    <div class="c"><div class="big" style="font-size:2rem" data-r="rev"></div>Custo de lentes assumido pelas famílias</div>
+</div>
+<p class="mu">As etiquetas ODS mostram qual objetivo cada indicador ajuda a comprovar.</p>
+</template>
 <noscript>Ative o JavaScript para usar o protótipo.</noscript>
 <script src="js/data.js"></script>
 <script src="js/i18n.js"></script>

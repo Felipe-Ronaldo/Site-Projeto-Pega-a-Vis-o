@@ -31,8 +31,4 @@ const PG={home:'index.html',login:'login.html',reg:'cadastro.html',aluno:'estuda
 const ROLE={aluno:'aluno',pedir:'aluno',admin:'admin',rel:'admin',escola:'escola',otica:'otica'};
 const flash=t=>{try{sessionStorage.setItem('pvm',t)}catch(e){}};
 
-/* ===== ODS do projeto (edite os textos aqui) ===== */
-const ODS=[
-{n:3,main:1,c:'#2E7D32',f:'#FFFFFF',t:'Saúde e Bem-Estar',lb:'Objetivo',m:'Assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades.',p:['Armações e consertos gratuitos para que estudantes possam corrigir a visão e cuidar da saúde visual.','Encaminhamento a óticas parceiras para lentes com receita, com os custos informados antes às famílias.','Acompanhamento de cada estudante atendido pelo painel da escola.']},
-{n:4,c:'#C5192D',f:'#FFFFFF',t:'Educação de Qualidade',lb:'Objetivo',m:'Assegurar a educação inclusiva e equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos.',p:['Armações e consertos gratuitos para estudantes que precisam enxergar bem para aprender.','Oficina STEM feita pelos próprios estudantes, com um problema real da comunidade.','Painel da escola para acompanhar cada estudante atendido.']},
-{n:12,meta:'12.5',c:'#BF8B2E',f:'#16222E',t:'Consumo e Produção Responsáveis',lb:'Meta 12.5',m:'Até 2030, reduzir substancialmente a geração de resíduos por meio da prevenção, redução, reciclagem e reuso.',p:['Reciclagem: as armações usam filamento de baixo custo.','Reuso: óculos quebrados são consertados com peças impressas em 3D, em vez de irem para o lixo.','Prevenção: a impressão 3D sob demanda produz só o que foi pedido, sem desperdício.']}];
+/* As ODS (textos e cores) agora ficam no index.html, na seção #ods. As cores estão em css/style.css (ods-cor-3, ods-cor-4, ods-cor-12). */

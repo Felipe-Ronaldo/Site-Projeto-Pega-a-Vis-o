@@ -20,6 +20,30 @@
 <rect id="gb" x="54" width="252" height="8" style="fill:var(--bg)"/><rect id="cg" width="36" height="26" style="fill:var(--bg)"/><path id="nz" style="fill:var(--ac2);stroke:var(--ac2)"/></g>
 <text id="lb" x="180" y="510" text-anchor="middle" font-size="10" letter-spacing="3" fill="currentColor" font-family="'DM Sans',sans-serif">IMPRESSÃO 0%</text></svg>
 <div id="app"></div>
+<!-- =====================================================================
+     CONTEÚDO DESTA PÁGINA: edite os textos aqui, é HTML normal.
+     O app.js copia este template para dentro de #app (ao lado do menu).
+     Marcas especiais (o JS troca por dados que mudam):
+       comentário com uma palavra só, ex.: linhas  → lista/tabela preenchida pelo JS (função em SL, no app.js)
+       {{nome}}         valor preenchido pelo JS
+       data-se="x"      o elemento só aparece quando o dado x existir
+       data-visitante   só aparece para quem NÃO está logado
+       data-r="nv"      número do relatório (nv, rp, rpd, pet, eq, imp, dir, ot, rev)
+     Importante: mantenha cada frase em UMA linha só; o tradutor (js/i18n.js) usa o texto exato.
+     ===================================================================== -->
+<template id="pagina">
+<section style="max-width:460px">
+  <h1 style="font-size:2rem">Área do projeto</h1>
+  <p class="mu">Entre para acompanhar pedidos ou gerenciar a oficina.</p>
+  <form data-f="login">
+    <label>E-mail<input name="e" type="email" required data-pre></label>
+    <label>Senha<input name="p" type="password" required></label>
+    <button class="b">Entrar</button>
+  </form>
+  <p class="mu">Ainda não tem conta? <button class="lk" data-a="go" data-v="reg">Solicitar cadastro</button></p>
+  <p class="mu" style="font-size:.9rem">Primeiro acesso: a primeira conta criada neste navegador vira a administradora da oficina.</p>
+</section>
+</template>
 <noscript>Ative o JavaScript para usar o protótipo.</noscript>
 <script src="js/data.js"></script>
 <script src="js/i18n.js"></script>

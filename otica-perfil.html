@@ -20,6 +20,29 @@
 <rect id="gb" x="54" width="252" height="8" style="fill:var(--bg)"/><rect id="cg" width="36" height="26" style="fill:var(--bg)"/><path id="nz" style="fill:var(--ac2);stroke:var(--ac2)"/></g>
 <text id="lb" x="180" y="510" text-anchor="middle" font-size="10" letter-spacing="3" fill="currentColor" font-family="'DM Sans',sans-serif">IMPRESSÃO 0%</text></svg>
 <div id="app"></div>
+<!-- =====================================================================
+     CONTEÚDO DESTA PÁGINA: edite os textos aqui, é HTML normal.
+     O app.js copia este template para dentro de #app (ao lado do menu).
+     Marcas especiais (o JS troca por dados que mudam):
+       comentário com uma palavra só, ex.: linhas  → lista/tabela preenchida pelo JS (função em SL, no app.js)
+       {{nome}}         valor preenchido pelo JS
+       data-se="x"      o elemento só aparece quando o dado x existir
+       data-visitante   só aparece para quem NÃO está logado
+       data-r="nv"      número do relatório (nv, rp, rpd, pet, eq, imp, dir, ot, rev)
+     Importante: mantenha cada frase em UMA linha só; o tradutor (js/i18n.js) usa o texto exato.
+     ===================================================================== -->
+<template id="pagina">
+<div class="row">
+  <h1>{{nome}}</h1>
+  <img class="selo" src="img/selo-otica-parceira.svg" alt="Selo Ótica Parceira Pega a Visão" width="104" height="104">
+</div>
+<div class="c">
+  <p>{{contato}}</p>
+  <h3>Tabela de lentes</h3>
+  <!--lentes-->
+</div>
+<button class="b b2" style="align-self:flex-start" data-a="go" data-v="opts">Voltar</button>
+</template>
 <noscript>Ative o JavaScript para usar o protótipo.</noscript>
 <script src="js/data.js"></script>
 <script src="js/i18n.js"></script>

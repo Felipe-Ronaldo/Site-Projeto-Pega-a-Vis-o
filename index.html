@@ -20,6 +20,153 @@
 <rect id="gb" x="54" width="252" height="8" style="fill:var(--bg)"/><rect id="cg" width="36" height="26" style="fill:var(--bg)"/><path id="nz" style="fill:var(--ac2);stroke:var(--ac2)"/></g>
 <text id="lb" x="180" y="510" text-anchor="middle" font-size="10" letter-spacing="3" fill="currentColor" font-family="'DM Sans',sans-serif">IMPRESSÃO 0%</text></svg>
 <div id="app"></div>
+<!-- =====================================================================
+     CONTEÚDO DESTA PÁGINA: edite os textos aqui, é HTML normal.
+     O app.js copia este template para dentro de #app (ao lado do menu).
+     Marcas especiais (o JS troca por dados que mudam):
+       comentário com uma palavra só, ex.: linhas  → lista/tabela preenchida pelo JS (função em SL, no app.js)
+       {{nome}}         valor preenchido pelo JS
+       data-se="x"      o elemento só aparece quando o dado x existir
+       data-visitante   só aparece para quem NÃO está logado
+       data-r="nv"      número do relatório (nv, rp, rpd, pet, eq, imp, dir, ot, rev)
+     Importante: mantenha cada frase em UMA linha só; o tradutor (js/i18n.js) usa o texto exato.
+     ===================================================================== -->
+<template id="pagina">
+<!-- ===== Topo ===== -->
+<section>
+  <img class="hero-logo" src="img/logo.png" alt="Logo do Projeto Pega a Visão" width="112" height="112">
+  <div class="ey">Projeto escolar · STEM · sustentável</div>
+  <div class="odbs">
+    <a class="odb ods-cor-3" href="#ods">ODS 3</a>
+    <a class="odb ods-cor-4" href="#ods">ODS 4</a>
+    <a class="odb ods-cor-12" href="#ods">ODS 12.5</a>
+  </div>
+  <h1>Enxergar bem para <span class="hl">aprender melhor</span></h1>
+  <p class="lead">O Pega a Visão fabrica armações ecológicas com filamento de baixo custo, em uma oficina de impressão 3D feita pela própria escola.</p>
+  <div class="row" style="justify-content:flex-start">
+    <a class="b" href="#projeto">Conheça o projeto</a>
+    <button class="b b2" data-a="go" data-v="login" data-visitante>Área do projeto</button>
+  </div>
+  <div id="v3d" class="ph v3d" role="img" aria-label="Modelo 3D dos óculos do projeto girando. Arraste para girar.">
+    <img class="fb3d" src="img/oculos-1.png" data-i="0" alt="Óculos do projeto impresso em 3D" loading="lazy" onerror="fb(this)">
+  </div>
+</section>
+
+<!-- ===== O projeto ===== -->
+<section id="projeto">
+  <div class="ey">O projeto</div>
+  <h2>Por que o Pega a Visão existe</h2>
+  <p>Estudantes com necessidade de correção visual enfrentam dificuldades para ler, prestar atenção e aprender quando não têm óculos adequados. Para muitas famílias, o custo de uma armação nova é alto e, quando os óculos quebram, o conserto demora ou nem acontece.</p>
+  <p>O projeto nasce na escola como uma iniciativa de aprendizagem STEM: os próprios estudantes da oficina produzem armações ecológicas, duráveis e ergonômicas com filamento de baixo custo e imprimem peças para consertar os óculos quebrados de quem já tem.</p>
+  <h3 style="margin-top:1.5rem">Nossos objetivos</h3>
+  <ul>
+    <li><b style="color:var(--s1)">Reduzir o custo</b> dos óculos novos para as famílias.</li>
+    <li><b style="color:var(--s4)">Ajudar na manutenção</b> de estudantes que já têm óculos e estão quebrados.</li>
+    <li><b style="color:var(--s2)">Promover a aprendizagem STEM</b> com um problema real da comunidade.</li>
+  </ul>
+</section>
+
+<!-- ===== Como funciona (os números nas bolinhas vêm do CSS) ===== -->
+<section id="como">
+  <div class="ey">Como funciona</div>
+  <h2>Do pedido à entrega</h2>
+  <p>Todo o acompanhamento fica em um só lugar, e o estudante vê em que etapa está o seu pedido de armação nova ou de conserto.</p>
+  <ol class="steps">
+    <li><b>Pedido.</b> O estudante ou o responsável pede uma armação nova ou o conserto de um óculos quebrado.</li>
+    <li><b>Aceitação.</b> A equipe avalia o pedido e as medidas informadas.</li>
+    <li><b>Modelagem.</b> A armação ou a peça de reparo é ajustada no computador.</li>
+    <li><b>Impressão 3D.</b> A peça é impressa com filamento de baixo custo.</li>
+    <li><b>Acabamento.</b> A equipe revisa e finaliza a peça.</li>
+    <li><b>Entrega.</b> A armação vai direto ao estudante ou, se houver interesse em lentes com receita, para uma ótica parceira, com os custos das lentes informados antes.</li>
+  </ol>
+  <p class="mu">O projeto não faz diagnóstico: estudantes com sinais de dificuldade para enxergar devem ser encaminhados à família e a um profissional de saúde.</p>
+</section>
+
+<!-- ===== STEM ===== -->
+<section id="stem">
+  <div class="ey">Aprender fazendo</div>
+  <h2>STEM na prática</h2>
+  <div class="g3">
+    <div><h3 style="color:var(--s1)">Ciência</h3><p class="mu">Reciclagem e propriedades do PET como material.</p></div>
+    <div><h3 style="color:var(--s3)">Tecnologia</h3><p class="mu">Modelagem e impressão 3D.</p></div>
+    <div><h3 style="color:var(--s4)">Engenharia</h3><p class="mu">Projeto de uma armação ergonômica e durável.</p></div>
+    <div><h3 style="color:var(--s2)">Matemática</h3><p class="mu">Medidas do rosto, escalas e ajuste de tamanho.</p></div>
+  </div>
+</section>
+
+<!-- ===== ODS ===== (a cor de cada ODS vem das classes ods-cor-3, ods-cor-4 e ods-cor-12 em css/style.css) -->
+<section id="ods">
+  <div class="ey">Agenda 2030</div>
+  <h2>Nossas ODS</h2>
+  <p>O Pega a Visão contribui com os Objetivos de Desenvolvimento Sustentável (ODS) da ONU, em especial com a <b>ODS 3 (nosso objetivo principal)</b>, além das ODS 4 e 12.</p>
+  <div class="g2">
+
+    <article class="ods odm" aria-label="ODS 3: Saúde e Bem-Estar (ODS principal)">
+      <div class="odh ods-cor-3"><small class="odp">ODS principal</small><b class="odn">ODS 3</b><span>Saúde e Bem-Estar</span></div>
+      <div class="odc">
+        <p class="mu"><b>Objetivo:</b> Assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades.</p>
+        <h3>Como contribuímos</h3>
+        <ul>
+          <li>Armações e consertos gratuitos para que estudantes possam corrigir a visão e cuidar da saúde visual.</li>
+          <li>Encaminhamento a óticas parceiras para lentes com receita, com os custos informados antes às famílias.</li>
+          <li>Acompanhamento de cada estudante atendido pelo painel da escola.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="ods" aria-label="ODS 4: Educação de Qualidade">
+      <div class="odh ods-cor-4"><b class="odn">ODS 4</b><span>Educação de Qualidade</span></div>
+      <div class="odc">
+        <p class="mu"><b>Objetivo:</b> Assegurar a educação inclusiva e equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos.</p>
+        <h3>Como contribuímos</h3>
+        <ul>
+          <li>Armações e consertos gratuitos para estudantes que precisam enxergar bem para aprender.</li>
+          <li>Oficina STEM feita pelos próprios estudantes, com um problema real da comunidade.</li>
+          <li>Painel da escola para acompanhar cada estudante atendido.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="ods" aria-label="ODS 12: Consumo e Produção Responsáveis">
+      <div class="odh ods-cor-12"><b class="odn">ODS 12</b><span>Consumo e Produção Responsáveis</span></div>
+      <div class="odc">
+        <p class="mu"><b>Meta 12.5:</b> Até 2030, reduzir substancialmente a geração de resíduos por meio da prevenção, redução, reciclagem e reuso.</p>
+        <h3>Como contribuímos</h3>
+        <ul>
+          <li>Reciclagem: as armações usam filamento de baixo custo.</li>
+          <li>Reuso: óculos quebrados são consertados com peças impressas em 3D, em vez de irem para o lixo.</li>
+          <li>Prevenção: a impressão 3D sob demanda produz só o que foi pedido, sem desperdício.</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== Nossos óculos (fotos: img/oculos-1.png a oculos-4.png) ===== -->
+<section id="oculos">
+  <div class="ey">Nossos óculos</div>
+  <h2>Armações feitas na oficina</h2>
+  <p>As armações são impressas em 3D com um mecanismo dobrável que já sai montado da impressora, existe uma versão menor, em 80% do tamanho, para rostos infantis, e há opção de encaixar lentes reais.</p>
+  <div class="gal">
+    <img src="img/oculos-1.png" data-i="0" alt="Foto do modelo Style Frame Glasses impresso em 3D" loading="lazy" onerror="fb(this)">
+    <img src="img/oculos-2.png" data-i="1" alt="Foto do modelo Style Frame Glasses impresso em 3D" loading="lazy" onerror="fb(this)">
+    <img src="img/oculos-3.png" data-i="2" alt="Foto do modelo Style Frame Glasses impresso em 3D" loading="lazy" onerror="fb(this)">
+    <img src="img/oculos-4.png" data-i="3" alt="Foto do modelo Style Frame Glasses impresso em 3D" loading="lazy" onerror="fb(this)">
+  </div>
+</section>
+
+<!-- ===== Impacto (só aparece depois do primeiro pedido aceito; os números vêm do sistema) ===== -->
+<section id="impacto" data-se="acc">
+  <div class="ey">Impacto</div>
+  <h2>Resultados até agora</h2>
+  <div class="g3">
+    <div><span class="odt ods-cor-4">ODS 4</span><div class="big" data-r="nv"></div><p class="mu">armações produzidas para estudantes</p></div>
+    <div><span class="odt ods-cor-12">ODS 12.5</span><div class="big" data-r="rpd"></div><p class="mu">óculos consertados, que deixaram de virar lixo</p></div>
+    <div><span class="odt ods-cor-12">ODS 12.5</span><div class="big" data-r="pet"></div><p class="mu">garrafas PET recicladas (estimativa)</p></div>
+  </div>
+</section>
+</template>
 <noscript>Ative o JavaScript para usar o protótipo.</noscript>
 <script src="js/data.js"></script>
 <script src="js/i18n.js"></script>

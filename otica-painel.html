@@ -20,6 +20,40 @@
 <rect id="gb" x="54" width="252" height="8" style="fill:var(--bg)"/><rect id="cg" width="36" height="26" style="fill:var(--bg)"/><path id="nz" style="fill:var(--ac2);stroke:var(--ac2)"/></g>
 <text id="lb" x="180" y="510" text-anchor="middle" font-size="10" letter-spacing="3" fill="currentColor" font-family="'DM Sans',sans-serif">IMPRESSÃO 0%</text></svg>
 <div id="app"></div>
+<!-- =====================================================================
+     CONTEÚDO DESTA PÁGINA: edite os textos aqui, é HTML normal.
+     O app.js copia este template para dentro de #app (ao lado do menu).
+     Marcas especiais (o JS troca por dados que mudam):
+       comentário com uma palavra só, ex.: linhas  → lista/tabela preenchida pelo JS (função em SL, no app.js)
+       {{nome}}         valor preenchido pelo JS
+       data-se="x"      o elemento só aparece quando o dado x existir
+       data-visitante   só aparece para quem NÃO está logado
+       data-r="nv"      número do relatório (nv, rp, rpd, pet, eq, imp, dir, ot, rev)
+     Importante: mantenha cada frase em UMA linha só; o tradutor (js/i18n.js) usa o texto exato.
+     ===================================================================== -->
+<template id="pagina">
+<h1>Painel da Ótica Parceira</h1>
+<img class="selo" src="img/selo-otica-parceira.svg" alt="Selo Ótica Parceira Pega a Visão" width="56" height="56">
+<div class="c tw">
+  <h3>Armações encaminhadas</h3>
+  <table>
+    <thead><tr><th>Pedido</th><th>Estudante</th><th>Lentes</th><th>Situação</th><th></th></tr></thead>
+    <tbody>
+      <!--linhas-->
+      <tr data-se="semArmacoes"><td colspan="5">Nenhuma armação encaminhada.</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="c">
+  <h3>Valores das lentes (R$)</h3>
+  <form class="row" data-f="price">
+    <!--precos-->
+    <label style="flex:1 1 240px">Endereço<input name="addr" value="{{addr}}"></label>
+    <label style="flex:1 1 160px">Telefone<input name="tel" value="{{tel}}"></label>
+    <button class="b">Salvar dados</button>
+  </form>
+</div>
+</template>
 <noscript>Ative o JavaScript para usar o protótipo.</noscript>
 <script src="js/data.js"></script>
 <script src="js/i18n.js"></script>

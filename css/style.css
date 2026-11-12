@@ -64,3 +64,8 @@ nav .lgb{padding:4px;min-width:44px;justify-content:center;border:2px solid tran
 nav .lgb:hover{background:var(--bg)}nav .lgb.sel{border-color:var(--ac)}
 .lgb svg{display:block;width:32px;height:22px;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.3)}
 [data-hc] .lgb svg{box-shadow:0 0 0 1px #fff}
+
+/* ===== Cores das ODS (use a classe no HTML: ods-cor-3, ods-cor-4 ou ods-cor-12) ===== */
+.ods-cor-3{background:#2E7D32;color:#FFFFFF}
+.ods-cor-4{background:#C5192D;color:#FFFFFF}
+.ods-cor-12{background:#BF8B2E;color:#16222E}

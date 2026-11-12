@@ -20,6 +20,41 @@
 <rect id="gb" x="54" width="252" height="8" style="fill:var(--bg)"/><rect id="cg" width="36" height="26" style="fill:var(--bg)"/><path id="nz" style="fill:var(--ac2);stroke:var(--ac2)"/></g>
 <text id="lb" x="180" y="510" text-anchor="middle" font-size="10" letter-spacing="3" fill="currentColor" font-family="'DM Sans',sans-serif">IMPRESSÃO 0%</text></svg>
 <div id="app"></div>
+<!-- =====================================================================
+     CONTEÚDO DESTA PÁGINA: edite os textos aqui, é HTML normal.
+     O app.js copia este template para dentro de #app (ao lado do menu).
+     Marcas especiais (o JS troca por dados que mudam):
+       comentário com uma palavra só, ex.: linhas  → lista/tabela preenchida pelo JS (função em SL, no app.js)
+       {{nome}}         valor preenchido pelo JS
+       data-se="x"      o elemento só aparece quando o dado x existir
+       data-visitante   só aparece para quem NÃO está logado
+       data-r="nv"      número do relatório (nv, rp, rpd, pet, eq, imp, dir, ot, rev)
+     Importante: mantenha cada frase em UMA linha só; o tradutor (js/i18n.js) usa o texto exato.
+     ===================================================================== -->
+<template id="pagina">
+<h1>Painel da Escola</h1>
+<div class="al">O projeto não faz diagnóstico: estudantes com sinais de dificuldade para enxergar devem ser encaminhados à família e a um profissional de saúde.</div>
+<div class="al"><span class="odt ods-cor-4">ODS 4</span> <b>{{recebidos}}</b> de {{total}} estudantes cadastrados já receberam o apoio do projeto.</div>
+<div class="c">
+  <h3>Cadastrar estudante com necessidade visual</h3>
+  <form class="row" data-f="stu">
+    <input name="name" placeholder="Nome" required style="flex:2 1 180px;width:auto">
+    <input name="turma" placeholder="Turma" required style="flex:1 1 90px;width:auto">
+    <select name="sit" style="flex:1 1 180px;width:auto">
+      <option>Sem óculos</option>
+      <option>Óculos quebrado</option>
+      <option>Troca necessária</option>
+    </select>
+    <button class="b">Cadastrar</button>
+  </form>
+</div>
+<div class="c tw">
+  <table>
+    <thead><tr><th>Estudante</th><th>Turma</th><th>Situação</th><th>Pedido</th><th>Custo para a família</th><th>Entrega</th></tr></thead>
+    <tbody><!--linhas--></tbody>
+  </table>
+</div>
+</template>
 <noscript>Ative o JavaScript para usar o protótipo.</noscript>
 <script src="js/data.js"></script>
 <script src="js/i18n.js"></script>

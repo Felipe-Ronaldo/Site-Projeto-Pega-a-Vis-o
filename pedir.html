@@ -20,6 +20,73 @@
 <rect id="gb" x="54" width="252" height="8" style="fill:var(--bg)"/><rect id="cg" width="36" height="26" style="fill:var(--bg)"/><path id="nz" style="fill:var(--ac2);stroke:var(--ac2)"/></g>
 <text id="lb" x="180" y="510" text-anchor="middle" font-size="10" letter-spacing="3" fill="currentColor" font-family="'DM Sans',sans-serif">IMPRESSÃO 0%</text></svg>
 <div id="app"></div>
+<!-- =====================================================================
+     CONTEÚDO DESTA PÁGINA: edite os textos aqui, é HTML normal.
+     O app.js copia este template para dentro de #app (ao lado do menu).
+     Marcas especiais (o JS troca por dados que mudam):
+       comentário com uma palavra só, ex.: linhas  → lista/tabela preenchida pelo JS (função em SL, no app.js)
+       {{nome}}         valor preenchido pelo JS
+       data-se="x"      o elemento só aparece quando o dado x existir
+       data-visitante   só aparece para quem NÃO está logado
+       data-r="nv"      número do relatório (nv, rp, rpd, pet, eq, imp, dir, ot, rev)
+     Importante: mantenha cada frase em UMA linha só; o tradutor (js/i18n.js) usa o texto exato.
+     ===================================================================== -->
+<template id="pagina">
+<h1>Solicitar apoio</h1>
+<p class="mu">Armação e conserto são gratuitos para estudantes do projeto.</p>
+<form id="of" data-f="ord">
+  <div class="c" style="display:flex;flex-direction:column;gap:8px">
+    <h2>O que você precisa?</h2>
+    <label class="r"><input type="radio" name="kind" value="nova" data-pk>Armação nova (não tenho óculos ou preciso trocar)</label>
+    <label class="r"><input type="radio" name="kind" value="reparo" data-pk>Meu óculos quebrou (conserto)</label>
+  </div>
+
+  <!-- Aparece quando escolhe "conserto" -->
+  <div id="kr" hidden>
+    <div class="c" style="display:flex;flex-direction:column;gap:12px">
+      <h2>O que quebrou?</h2>
+      <label>Dano
+        <select name="dmg">
+          <option>Haste quebrada</option>
+          <option>Ponte quebrada</option>
+          <option>Armação rachada</option>
+          <option>Dobradiça ou parafuso solto</option>
+          <option>Outro</option>
+        </select>
+      </label>
+      <label>Observação (opcional)<input name="obs"></label>
+      <p class="mu" style="margin:0">Entregue o óculos na escola para a oficina avaliar e imprimir a peça.</p>
+    </div>
+  </div>
+
+  <!-- Aparece quando escolhe "armação nova" -->
+  <div id="kn">
+    <div class="c">
+      <h2>Medidas ergonômicas</h2>
+      <div class="g3">
+        <label>Largura do rosto (mm)<input name="a" inputmode="numeric"></label>
+        <label>Distância entre os olhos (mm)<input name="b" inputmode="numeric"></label>
+        <label>Comprimento da haste (mm)<input name="c" inputmode="numeric"></label>
+      </div>
+    </div>
+    <div class="c" style="display:flex;flex-direction:column;gap:12px;margin-top:20px">
+      <h2>Lentes com receita (opcional)</h2>
+      <label class="r"><input type="radio" name="lens" value="0" checked>Só a armação (sem custo)</label>
+      <label class="r"><input type="radio" name="lens" value="1">Incluir lentes em uma ótica parceira</label>
+      <div id="lx" hidden class="g3">
+        <label>Ótica<select name="op"><!--oticas--></select></label>
+        <label>Tipo de lente<select name="lt"><!--lentes--></select></label>
+      </div>
+      <div class="al row"><b>Custo das lentes para a família</b><b id="cost">R$ 0,00</b></div>
+    </div>
+  </div>
+
+  <div class="row" style="justify-content:flex-start">
+    <button class="b">Enviar solicitação</button>
+    <button type="button" class="b b2" data-a="go" data-v="aluno">Voltar ao painel</button>
+  </div>
+</form>
+</template>
 <noscript>Ative o JavaScript para usar o protótipo.</noscript>
 <script src="js/data.js"></script>
 <script src="js/i18n.js"></script>

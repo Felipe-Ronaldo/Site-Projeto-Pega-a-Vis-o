@@ -20,6 +20,37 @@
 <rect id="gb" x="54" width="252" height="8" style="fill:var(--bg)"/><rect id="cg" width="36" height="26" style="fill:var(--bg)"/><path id="nz" style="fill:var(--ac2);stroke:var(--ac2)"/></g>
 <text id="lb" x="180" y="510" text-anchor="middle" font-size="10" letter-spacing="3" fill="currentColor" font-family="'DM Sans',sans-serif">IMPRESSÃO 0%</text></svg>
 <div id="app"></div>
+<!-- =====================================================================
+     CONTEÚDO DESTA PÁGINA: edite os textos aqui, é HTML normal.
+     O app.js copia este template para dentro de #app (ao lado do menu).
+     Marcas especiais (o JS troca por dados que mudam):
+       comentário com uma palavra só, ex.: linhas  → lista/tabela preenchida pelo JS (função em SL, no app.js)
+       {{nome}}         valor preenchido pelo JS
+       data-se="x"      o elemento só aparece quando o dado x existir
+       data-visitante   só aparece para quem NÃO está logado
+       data-r="nv"      número do relatório (nv, rp, rpd, pet, eq, imp, dir, ot, rev)
+     Importante: mantenha cada frase em UMA linha só; o tradutor (js/i18n.js) usa o texto exato.
+     ===================================================================== -->
+<template id="pagina">
+<div class="c" style="max-width:460px;margin:auto;width:100%">
+  <h2>Solicitar cadastro</h2>
+  <p class="mu">O acesso é liberado após o aceite do administrador.</p>
+  <form data-f="reg">
+    <label>Nome<input name="name" required></label>
+    <label>E-mail<input name="email" type="email" required></label>
+    <label>Senha<input name="pw" type="password" minlength="6" required></label>
+    <label>Perfil
+      <select name="role">
+        <option value="aluno">Estudante / Responsável</option>
+        <option value="escola">Professor / Escola</option>
+        <option value="otica">Ótica Parceira</option>
+      </select>
+    </label>
+    <label>Escola ou ótica<input name="org"></label>
+    <button class="b">Enviar solicitação</button>
+  </form>
+</div>
+</template>
 <noscript>Ative o JavaScript para usar o protótipo.</noscript>
 <script src="js/data.js"></script>
 <script src="js/i18n.js"></script>
